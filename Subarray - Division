@@ -1,0 +1,24 @@
+##Basic Description##
+
+You are given an array of integers(generally), you are given a fixed length(of the subarray) and a fixed sum(of all members of the subarray) to check for(condition)
+
+Can be many variations , depends on wether ##contiguous## is mentioned(?)
+
+##If contiguous is mentioned ?##
+
+#Simplest method#
+
+Use two loops to iterate through the list/array and check sum of the subaary specifically
+
+Time Complexity : O(n^2) 
+
+#Better Approach#
+
+While taking input store values such that ith element of the array has the sum of all i elements that came before it.
+
+Hence, if n(length of array) >= m(specified length of subarray) and (m-1) == d(specified sum of the memebrs of the subarray)
+then, we get to check the first m elements instantly and decide the output.
+
+After this, we iteratre through the mth elemnt to the nth element, while checking if (ith element - (i-m)the element() is equal to d.
+
+Time Complexity : O(n)
